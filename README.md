@@ -1,57 +1,37 @@
-# Sistema-Inteligente-de-Reconocimiento-de-Vida-Salvaje
-Sistema Inteligente de Reconocimiento de Vida Salvaje
+# Sistema Inteligente de Reconocimiento de Vida Salvaje
 
-Este proyecto implementa un sistema de clasificación automática de imágenes de animales (gatos, perros y vida salvaje) utilizando técnicas de aprendizaje profundo y transferencia de aprendizaje con el modelo ResNet50. La solución está orientada a su potencial aplicación en tareas de conservación, monitoreo ambiental y automatización de análisis visual.
+## Descripción
 
-📌 Objetivo
-Desarrollar un modelo capaz de identificar la clase de un animal en una imagen, diferenciando entre:
+Este proyecto implementa un modelo de aprendizaje profundo basado en ResNet50 para clasificar imágenes en tres categorías: gatos, perros y animales salvajes. Utiliza el dataset Animal Faces (AFHQ) para entrenar y validar el modelo, y permite evaluar nuevas imágenes externas para comprobar su capacidad de reconocimiento.
 
-Gato (doméstico)
+## Contenido del Notebook
 
-Perro (doméstico)
+- Descarga y preparación del dataset Animal Faces.
+- Definición de generadores de imágenes con aumentos y preprocesamiento.
+- Construcción y entrenamiento del modelo con transferencia de aprendizaje.
+- Evaluación del modelo con métricas de precisión, recall y F1-score.
+- Pruebas en imágenes reales para validar el desempeño fuera del dataset.
 
-Salvaje (vida silvestre)
+## Requisitos
 
-🧠 Enfoque técnico
-Modelo base: ResNet50 preentrenada en ImageNet
+- Python 3.x
+- TensorFlow 2.x
+- Keras
+- NumPy
+- Matplotlib (opcional, para visualizaciones)
+- Google Colab (opcional, recomendado para facilitar la ejecución)
 
-Técnica: Transferencia de aprendizaje con fine-tuning
+## Cómo usarlo
 
-Dataset: AFHQ (Animal Faces-HQ)
+1. Clona o descarga el notebook.
+2. Ejecuta paso a paso para descargar el dataset y preparar los datos.
+3. Entrena el modelo (puedes modificar el número de epochs).
+4. Evalúa el modelo y realiza pruebas con imágenes externas.
+5. Guarda el modelo entrenado para uso futuro.
 
-Frameworks: PyTorch, torchvision
+## Futuras mejoras
 
-Entrenamiento: 80% entrenamiento, 10% validación, 10% test
-
-Evaluación: Accuracy, Recall, Precision, F1-Score, matriz de confusión
-
-📈 Resultados
-Validación: Alta precisión (99.87%)
-
-Test: Bajo rendimiento (F1 ~34%) debido a sobreajuste
-
-Diagnóstico: Falta de generalización y confusión entre clases similares
-
-⚠️ Limitaciones
-El modelo presenta sobreajuste y una débil capacidad de generalización en datos no vistos. Se requieren mejoras en la diversidad del dataset y ajustes en el entrenamiento para su despliegue en entornos reales.
-
-🔭 Líneas futuras
-Aumento y diversificación de datos
-
-Pruebas con modelos alternativos (e.g., EfficientNet, ViT)
-
-Técnicas de ensemble
-
-Clasificación jerárquica
-
-Optimización del fine-tuning y regularización
-
-🚀 Aplicaciones potenciales
-Conservación de fauna
-
-Sistemas de vigilancia ambiental
-
-Curaduría automática de contenido visual
-
-Monitoreo remoto mediante cámaras trampa
-
+- Ampliar el dataset con más clases de animales.
+- Implementar técnicas de afinamiento (fine-tuning) avanzadas.
+- Añadir interfaz gráfica para facilitar el uso.
+- Experimentar con otras arquitecturas de redes neuronales.
